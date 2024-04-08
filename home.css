@@ -1,0 +1,37 @@
+@media only screen and (min-width: 7in){
+	.card {margin-left: 3%; margin-top: 3%; margin-right: 3%;}
+}
+
+body {
+	background-color: #008080;
+	background-image: url(images/cloudsBG.webp);
+	background-position: top;
+	background-repeat: repeat-y;
+}
+
+.welcomeIcon {
+	transform: scale(.8);
+	float: left;
+	margin-top: 1%;
+}
+
+.welcomeTxt {
+	margin-left: 2%;
+}
+
+.colourToggle {
+	margin-left: 78%;
+}
+
+.darkLight {
+	scale: 2;
+	margin-left: 12%;
+	margin-top: 12%;
+	margin-right: 12%;
+	margin-bottom: 11%;
+}
+
+.window {
+	/background-color: rgb(32, 28, 58);
+
+}

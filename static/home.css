@@ -4,13 +4,13 @@
 
 body {
 	background-color: #008080;
-	background-image: url(images/cloudsBG.webp);
+	background-image: url(cloudsBG.webp);
 	background-position: top;
 	background-repeat: repeat-y;
 }
 
 .welcomeIcon {
-	transform: scale(.8);
+	transform: scale(.6);
 	float: left;
 	margin-top: 1%;
 }
@@ -31,7 +31,4 @@ body {
 	margin-bottom: 11%;
 }
 
-.window {
-	/background-color: rgb(32, 28, 58);
 
-}

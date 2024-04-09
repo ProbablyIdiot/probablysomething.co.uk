@@ -1,7 +1,8 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://unpkg.com/98.css">
-	<link rel="stylesheet" href="./home.css">
+	<link rel="stylesheet" href="static/home.css">
+	<link rel="script" href="home.js">
 	<title>TEST TITLE</title>
 </head>
 <body>
@@ -15,8 +16,8 @@
 					<button aria-label="Close"></button>
 				</div>
 			</div>
-			<div class="welcomeIcon"><img src="images\netIcon.png" alt="Picture of a book." /></div>
-			<div class="WelcomeTxt"><h1>Test</h1></div>
+			<div class="welcomeIcon"><img src="/static/netIcon.png" alt="Internet icon." /></div>
+			<div class="WelcomeTxt"><h2>Welcome to CodeChronicles</h2> - A place for me to post all my random projects!</div>
 		</div>
 
 		<div id="colourToggle" class="window colourToggle">
@@ -29,7 +30,15 @@
 				</div>
 			</div>
 			<fieldset>
-				<img class="darkLight" src="images/darkLight.png" alt="Light/Dark mode icon"/>
+				<div class="field-row">Light/Dark mode:</div>
+				<div class="field-row">
+					<input id="light" type="radio" name="fieldset-example" />
+					<label for="light">Light mode</label>
+
+				<div class="field-row">
+					<input id="dark" type="radio" name="fieldset-example" />
+					<label for="dark">Dark mode</label>
+				</div>
 			</fieldset>
 		</div>
 	</div>

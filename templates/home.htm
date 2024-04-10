@@ -2,8 +2,7 @@
 <head>
 	<link rel="stylesheet" href="https://unpkg.com/98.css">
 	<link rel="stylesheet" href="static/home.css">
-	<link rel="script" href="home.js">
-	<title>TEST TITLE</title>
+	<title>CodeChronicles.uk.to - A place for all my random projects</title>
 </head>
 <body>
 	<div class="card">
@@ -17,30 +16,47 @@
 				</div>
 			</div>
 			<div class="welcomeIcon"><img src="/static/netIcon.png" alt="Internet icon." /></div>
-			<div class="WelcomeTxt"><h2>Welcome to CodeChronicles</h2> - A place for me to post all my random projects!</div>
+			<div class="WelcomeTxt"><h2>Welcome to CodeChronicles!</h2>A website for all my tech projects, code, blogs and anything else I can think of. Written in plain HTML, CSS and Flask python.</div>
 		</div>
 
-		<div id="colourToggle" class="window colourToggle">
+		<div id="blogsPane" class="window blogsPane">
 			<div class="title-bar inactive">
-				<div class="title-bar-text">ColToggle.exe</div>
+				<div class="title-bar-text">BlogView.exe</div>
 				<div class="title-bar-controls">
 					<button aria-label="Minimize"></button>
 					<button aria-label="Maximize"></button>
 					<button aria-label="Close"></button>
 				</div>
 			</div>
-			<fieldset>
-				<div class="field-row">Light/Dark mode:</div>
-				<div class="field-row">
-					<input id="light" type="radio" name="fieldset-example" />
-					<label for="light">Light mode</label>
 
-				<div class="field-row">
-					<input id="dark" type="radio" name="fieldset-example" />
-					<label for="dark">Dark mode</label>
-				</div>
-			</fieldset>
+			<ul class="tree-view">
+				<li><h4 style="color: 2200CC;">{{recentBlogs[0][1]}}</h4></li>
+				<li style="word-wrap: break-word;"> {{recentBlogs[0][2]}} </li>
+				<li>----------------------------------------------------------------------------------------------------</li>
+				<li><h4 style="color: 2200CC;">{{recentBlogs[1][1]}}</h4></li>
+				<li style="word-wrap: break-word;"> {{recentBlogs[1][2]}} </li>
+				<li>----------------------------------------------------------------------------------------------------</li>
+				<li><h4 style="color: 2200CC;">{{recentBlogs[2][1]}}</h4></li>
+				<li style="word-wrap: break-word;"> {{recentBlogs[2][2]}} </li>
+				<li>----------------------------------------------------------------------------------------------------</li>
+				<li><h4 style="color: 2200CC;">{{recentBlogs[3][1]}}</h4></li>
+				<li style="word-wrap: break-word;"> {{recentBlogs[3][2]}} </li>
+				<li>----------------------------------------------------------------------------------------------------</li>
+				<li><h4 style="color: 2200CC;">{{recentBlogs[4][1]}}</h4></li>
+				<li style="word-wrap: break-word;"> {{recentBlogs[4][2]}} </li>
+			</ul>
+			<div class="status-bar">
+				<p class="status-bar-field"><a href="https://codechronicles.uk.to/posts">All posts</a></p>
+				<p id="currentDate" class="status-bar-field"></p>
+			</div>
 		</div>
 	</div>
 </body>
+<script>
+	var now = new Date();
+	var datetime = now.toLocaleTimeString() + " - " + now.toLocaleDateString();
+
+	document.getElementById("currentDate").innerHTML = "Last updated: " + datetime;
+</script>
+
 </html>

@@ -5,6 +5,10 @@
 	<title>CodeChronicles.uk.to - A place for all my random projects</title>
 </head>
 <body>
+	<div class="topnav">
+		<button class="permPressed" href="#/">🏠Home</button>
+	</div>
+
 	<div class="card">
 		<div id="welcomeWindow" class="window" style="width: 75%; float: left;">
 			<div class="title-bar">
@@ -16,7 +20,7 @@
 				</div>
 			</div>
 			<div class="welcomeIcon"><img src="/static/netIcon.png" alt="Internet icon." /></div>
-			<div class="WelcomeTxt"><h2>Welcome to CodeChronicles!</h2>A website for all my tech projects, code, blogs and anything else I can think of. Written in plain HTML, CSS and Flask python.</div>
+			<div class="WelcomeTxt"><h2>Welcome to Code<wbr>Chronicles!</h2>A website for all my tech projects, code, blogs and anything else I can think of. Written in plain HTML, CSS and Flask python.</div>
 		</div>
 
 		<div id="blogsPane" class="window blogsPane">
@@ -32,21 +36,21 @@
 			<ul class="tree-view">
 				<li><h4 style="color: 2200CC;">{{recentBlogs[0][1]}}</h4></li>
 				<li style="word-wrap: break-word;"> {{recentBlogs[0][2]}} </li>
-				<li>----------------------------------------------------------------------------------------------------</li>
+				<li> <div class="blogDivide"></div> </li>
 				<li><h4 style="color: 2200CC;">{{recentBlogs[1][1]}}</h4></li>
 				<li style="word-wrap: break-word;"> {{recentBlogs[1][2]}} </li>
-				<li>----------------------------------------------------------------------------------------------------</li>
+				<li> <div class="blogDivide"></div> </li>
 				<li><h4 style="color: 2200CC;">{{recentBlogs[2][1]}}</h4></li>
 				<li style="word-wrap: break-word;"> {{recentBlogs[2][2]}} </li>
-				<li>----------------------------------------------------------------------------------------------------</li>
+				<li> <div class="blogDivide"></div> </li>
 				<li><h4 style="color: 2200CC;">{{recentBlogs[3][1]}}</h4></li>
 				<li style="word-wrap: break-word;"> {{recentBlogs[3][2]}} </li>
-				<li>----------------------------------------------------------------------------------------------------</li>
+				<li> <div class="blogDivide"></div> </li>
 				<li><h4 style="color: 2200CC;">{{recentBlogs[4][1]}}</h4></li>
 				<li style="word-wrap: break-word;"> {{recentBlogs[4][2]}} </li>
 			</ul>
 			<div class="status-bar">
-				<p class="status-bar-field"><a href="https://codechronicles.uk.to/posts">All posts</a></p>
+				<p class="status-bar-field"><a href="/posts">All posts</a></p>
 				<p id="currentDate" class="status-bar-field"></p>
 			</div>
 		</div>
@@ -57,6 +61,7 @@
 	var datetime = now.toLocaleTimeString() + " - " + now.toLocaleDateString();
 
 	document.getElementById("currentDate").innerHTML = "Last updated: " + datetime;
+
 </script>
 
 </html>

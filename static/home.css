@@ -23,6 +23,18 @@ body {
 	margin-left: 78%;
 }
 
+.blogDivide {
+	width: 100%;
+	border-bottom: 1px dashed black;
+}
 
+.topnav {
+	background-color: #c0c0c0;
+	overflow: hidden;
+	padding-left: 0px;
+}
 
+.permPressed {
+	box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px #808080;
+}
 

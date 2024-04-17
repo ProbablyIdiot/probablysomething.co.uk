@@ -9,6 +9,11 @@ body {
 	background-repeat: repeat-y;
 }
 
+h4 {
+	padding: 0px;
+	margin: 0px;
+}
+
 .welcomeIcon {
 	transform: scale(.6);
 	float: left;
@@ -36,5 +41,14 @@ body {
 
 .permPressed {
 	box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px #808080;
+}
+
+.blogPrev {
+	overflow: hidden;
+	display: -webkit-box;
+	word-wrap: break-word;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
 }
 

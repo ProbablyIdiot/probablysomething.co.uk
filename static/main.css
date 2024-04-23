@@ -1,5 +1,13 @@
 @media only screen and (min-width: 7in){
-	.card {margin-left: 3%; margin-top: 3%; margin-right: 3%;}
+	.card {
+		margin-left: 3%;
+		margin-top: 3%;
+		margin-right: 3%;
+		display: grid;
+		column-gap: 1%;
+		row-gap: 3%;
+		grid-template-columns: 72% auto;
+	}
 }
 
 body {

@@ -10,8 +10,8 @@
 		<button class="topnavBtn" href="#/"> <img  style="float:left; margin-left: 5px;" src="/static/win98icons/windows-4.png" >Home</button>
 	</div>
 
-	<div class="card">
-		<div id="welcomeWindow" class="window" style="width: 75%; float: left;">
+	<div class="card"> <!--Adds edge-of-page margin-->
+		<div id="welcomeWindow" class="window mainContent"><!--main welcome-->
 			<div class="title-bar">
 				<div class="title-bar-text">WelcomeMsg.exe</div>
 				<div class="title-bar-controls">
@@ -22,6 +22,12 @@
 			</div>
 			<div class="welcomeIcon"><img src="/static/netIcon.png" alt="Internet icon." /></div>
 			<div class="WelcomeTxt"><h2>Welcome to Code<wbr>Chronicles!</h2>A website for all my tech projects, code, blogs and anything else I can think of. Written in plain HTML, CSS and Flask python.</div>
+		</div>
+		<div class="linkHold mainContent"><!--links to socials-->
+			<menu role="tablist">
+				<li role="tab" aria-selected="true"><a href="#tabs">Github</a></li>
+			</menu>
+			<div class="window" role="tabpanel"></div>
 		</div>
 
 		<div id="blogsPane" class="window blogsPane">

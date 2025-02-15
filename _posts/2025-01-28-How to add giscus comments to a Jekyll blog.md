@@ -22,5 +22,3 @@ Head to the [giscus website](https://giscus.app/) and follow the instructions th
 ### Step 3 - Insert into blog
 
 Now, head to your website's code, and scroll to the bottom of your posts template. Here, insert the code you generated earlier, and you're good to go! Hope this helped, make sure to leave a comment if so.
-
-

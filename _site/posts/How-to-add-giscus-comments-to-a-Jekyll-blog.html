@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-	<title>ProbablySomething - Links</title>
+	<title>ProbablySomething - How to add giscus comments to a jekyll blog</title>
 	<link rel="stylesheet" href="/assets/css/main.css">
 	<link rel="stylesheet" href="/assets/css/permFeatures.css">
 	<link rel="stylesheet" href="https://unpkg.com/98.css">
@@ -37,8 +37,8 @@
 			<div class="mainContent window">
 				<div class="title-bar">
 					<div class="title-bar-text">
-						<img src="/assets/images/w98-icons/directory_control_panel_cool-4.png" class="windowIco"/>
-						<span class="windowTitle">Control Panel</span>
+						<img src="/assets/images/w98-icons/executable_script-0.png" class="windowIco"/>
+						<span class="windowTitle">BlogZilla rc1-2025.01.01</span>
 					</div>
 					<div class="title-bar-controls">
 						<button aria-label="Minimize"></button>
@@ -48,43 +48,55 @@
 				</div>
 
 				<div class="windowTxt"><head>
-	<link rel="stylesheet" href="/assets/css/links.css">
+	<link rel="stylesheet" href="/assets/css/postLayout.css">
 </head>
 
+<h2>How to add giscus comments to a jekyll blog</h2>
+<form action="https://rssto.email" method="GET" target="_blank" style="margin: 2mm;">
+    <input type="hidden" name="url" value="https://probablysomething.co.uk/feed.xml">
+    <button type="submit">Sign up to the newsletter!</button>
+</form>
+<fieldset>
+	<p>28 Jan 2025 - ProbablyIdiot</p>
+</fieldset>
 
-<div class="titleBarContr"><u>F</u>ile&emsp;<u>E</u>dit&emsp;<u>V</u>iew&emsp;<u>H</u>elp</div>
-<ul class="tree-view projView" style="margin-top: 2mm;">
-	<div class="window dcWidget">
-		<img src="assets/images/GR_logo.png" class="geoImg"/>
-		<div class="projTxt">GeoRail</div>
-		<p class="projDesc">GeoRail is an MTR mod-based Minecraft server. We have a tight-knit community, amazing builders, and incredible passion for our work.</p>
-		<a class="projDesc dcLink" target="_blank" href="https://discord.gg/4qda6G6Nb3">Join now!</a>
-	</div>
+<p>This is actually quite easy, but there are a few steps required before just adding the code to your web page.</p>
 
-	<div class="window spotifyWidget">
-		<img src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png" class="spotifyImg"/>
-		<div class="projTxt">&ensp;Spotify</div>
-		<p class="projDesc">Stats:</p>
-		<a target="_blank" href="https://spotifytrack.net/stats/31ffkaczxkyrvdhgxojm5hjjxdpi">SpotifyTrack</a>
+<h3 id="step-1---enable-gh-discussions">Step 1 - Enable GH discussions</h3>
 
-		<p class="projDesc">Profile:</p>
-		<a target="_blank" href="https://open.spotify.com/user/31ffkaczxkyrvdhgxojm5hjjxdpi?si=d6a82459fb1f4371">Spotify</a>
-	</div>
+<p>The way that giscus works is by creating GitHub discussion posts for each page and then displaying that discussion on the webpage. To enable GH discussions, head to your repo’s settings page, and scroll down to the features section. From there, simply enable discussions.</p>
 
-	<div class="window dcWidget">
-		<img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6ca814282eca7172c6_icon_clyde_white_RGB.svg" class="geoImg"/>
-		<div class="projTxt">&ensp;Discord</div>
-		<a class="projDesc dcLink" target="_blank" href="https://discordapp.com/users/977493214019870740">View profile</a>
-	</div>
+<p><img src="/assets/postImages/GHdiscussSetup.png" alt="" /></p>
 
-	<div class="window ghWidget" style="width: 730px;">
-		<img src="assets/images/github-mark-white.png" class="ghImg"/>
-		<div class="projTxt">&emsp14;GitHub - <a class="dcLink" target="_blank" href="https://github.com/ProbablyIdiot">View profile</a></div>
-		<div></div>
-		<img src="https://ghchart.rshah.org/ProbablyIdiot" />
-	</div>
-</ul>
-</div>
+<p>You may want to clear out the extra categories here, but make sure you leave at least one announcements channel, as that’s what you’ll want to use for giscus.</p>
+
+<h3 id="step-2---generate-giscus-code">Step 2 - Generate giscus code</h3>
+
+<p>Head to the <a href="https://giscus.app/">giscus website</a> and follow the instructions there. Then select the discussion category as the announcements one you setup earlier and copy the code.</p>
+
+<h3 id="step-3---insert-into-blog">Step 3 - Insert into blog</h3>
+
+<p>Now, head to your website’s code, and scroll to the bottom of your posts template. Here, insert the code you generated earlier, and you’re good to go! Hope this helped, make sure to leave a comment if so.</p>
+
+
+<div>
+	<script src="https://giscus.app/client.js"
+        data-repo="probablyidiot/probablysomething.co.uk"
+        data-repo-id="R_kgDOLqJ3Qw"
+        data-category="Giscus"
+        data-category-id="DIC_kwDOLqJ3Q84CmY_p"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+	</script>
+</div></div>
 			</div>
 			<div class="mainSidebar window">
 				<div class="title-bar inactive">

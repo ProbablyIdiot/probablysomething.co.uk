@@ -20,3 +20,5 @@ feed:
   feed.icon: /favicon.png
 
 permalink: "/posts/:title.html"
+
+include: [".well-known"]

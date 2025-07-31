@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html><head>
+	<title>ProbablySomething - How to make a newsletter for a jekyll blog</title>
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/css/permFeatures.css">
+	<link rel="stylesheet" href="https://unpkg.com/98.css">
+	<link rel="shortcut icon" type="image/png" href="/favicon.png">
+	<link rel="alternate" type="application/rss+xml" href="https://probablysomething.co.uk/feed.xml"/>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YDPCLMPZ5P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YDPCLMPZ5P');
+</script><body><div class="window topnav">
+	<form action="/#">
+		<button type="submit" class="topnavBtn">
+			<img class="topnavImg" src="/assets/images/start-button.png">
+		</button>
+	</form>
+
+	<form action="/posts" style="grid-column: 3;">
+		<button type="submit" class="topnavBtn">
+			Posts
+		</button>
+	</form>
+
+	<form action="/links" style="grid-column: 2;">
+		<button type="submit" class="topnavBtn">
+			Links
+		</button>
+	</form>
+</div><div class="mainFlex">
+			<div class="mainContent window">
+				<div class="title-bar">
+					<div class="title-bar-text">
+						<img src="/assets/images/w98-icons/executable_script-0.png" class="windowIco"/>
+						<span class="windowTitle">BlogZilla beta2-2024.08.14</span>
+					</div>
+					<div class="title-bar-controls">
+						<button aria-label="Minimize"></button>
+						<button aria-label="Maximize"></button>
+						<button aria-label="Close"></button>
+					</div>
+				</div>
+
+				<div class="windowTxt"><head>
+	<link rel="stylesheet" href="/assets/css/postLayout.css">
+</head>
+
+<h2>How to make a newsletter for a jekyll blog</h2>
+<form action="https://rssto.email" method="GET" target="_blank" style="margin: 2mm;">
+    <input type="hidden" name="url" value="https://probablysomething.co.uk/feed.xml">
+    <button type="submit">Sign up to the newsletter!</button>
+</form>
+<fieldset>
+	<p>12 Dec 2024 - ProbablyIdiot</p>
+</fieldset>
+
+<p>This is one of the most overly complex and undocumented jekyll problems I’ve come across so far (apart from pagination - but I try to block that out of my memory). I’ll try to make this short and easy to follow, but no promises.</p>
+
+<h3 id="step-1---install-jekyll-feed">Step 1 - Install <code class="language-plaintext highlighter-rouge">jekyll-feed</code></h3>
+
+<p>You might think “Why would I want an RSS feed? I want a newsletter!”. However, this is the simplest way of doing it. At the moment there are no plugins or tutorials for directly sending emails from your jekyll site (or none that I could find), therefore, the easiest way to make a newsletter is to copy your RSS feed.</p>
+
+<p>Just follow the instructions on the <a href="https://github.com/jekyll/jekyll-feed">jekyll-feed Github</a> to install the plugin, and check that it works by going to <code class="language-plaintext highlighter-rouge">yoururl.com/feed.xml</code>. If it worked, you should see something like this, with the text containing all blog posts you have previously made.<img src="/assets/postImages/feedXml.png" alt="" /></p>
+
+<h3 id="step-2---setup-a-mailing-website-to-mirror-your-rss-feed">Step 2 - Setup a mailing website to mirror your RSS feed</h3>
+
+<p>This is the step that has taken forever to figure out. The most popular option for setups like this is <a href="https://mailchimp.com">Intuit Mailchimp</a>, however, they can get quite pricey and I prefer something open-source. At first I tried the <a href="[GitHub - ElliotKillick/rss2newsletter: Convert RSS/Atom feed to email newsletters](https://github.com/ElliotKillick/rss2newsletter)">RSS2Newsletter</a> project, however I could not manage to get it to install on my raspberry pi. I then spent ages looking through google for a free alternative. This is when I stumbled upon <a href="https://rssto.email">rssto.email</a>. A FOSS project hosted on Github that will convert any RSS feed into a newsletter and deliver it straight to your inbox. They have a simple user interface, and allow you to embed a link for your RSS feed straight into your blog. This can be annoying to setup, however, so look at step 3 for how to do that.</p>
+
+<h3 id="step-3---setting-up-a-link-for-rsstoemail">Step 3 - Setting up a link for <code class="language-plaintext highlighter-rouge">rssto.email</code></h3>
+
+<p>Head to their website, and click the EMBED ON YOUR BLOG button. Input the link to your RSS feed and then copy the link.</p>
+
+<p><img src="/assets/postImages/rssToEmail.png" alt="" /></p>
+
+<p>Then use this code (replacing <code class="language-plaintext highlighter-rouge">yourURL.com</code> with the link you copied) to create a newsletter button on your blog:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"https://rssto.email"</span> <span class="na">method=</span><span class="s">"GET"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"hidden"</span> <span class="na">name=</span><span class="s">"url"</span> <span class="na">value=</span><span class="s">"yourURL.com"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Sign up to the newsletter!<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+
+<p>There you go! You should now have a fully functional newsletter for your users to keep up with all your blog posts. My next blog should be on adding comments, so keep an eye out for that.</p>
+
+
+<div>
+	<script src="https://giscus.app/client.js"
+        data-repo="probablyidiot/probablysomething.co.uk"
+        data-repo-id="R_kgDOLqJ3Qw"
+        data-category="Giscus"
+        data-category-id="DIC_kwDOLqJ3Q84CmY_p"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+	</script>
+</div></div>
+			</div>
+			<div class="mainSidebar window">
+				<div class="title-bar inactive">
+					<div class="title-bar-text">
+						<img src="/assets/images/w98-icons/address_book-1.png" class="windowIco"/>
+						<span class="windowTitle">blogviewR 0.12.4</span>
+					</div>
+					<div class="title-bar-controls">
+						<button aria-label="Minimize"></button>
+						<button aria-label="Maximize"></button>
+						<button aria-label="Close"></button>
+					</div>
+				</div><ul class="tree-view">
+	
+		<li>
+			<h3><a href="/posts/Spotify-shuffle-sucks!!!-(And-how-you-can-fix-it).html" class="blogLink">Spotify shuffle sucks!!! (and how you can fix it)</a></h3></li>
+			<div class="blogPrev"><p>There’s a few things certain in life: death, taxes and Spotify’s shuffle algorithm eternally sucking ass. We all know the problem, you go to listen to your miles long playlist, hoping to find some long-lost music to rediscover, just to be given the same 10 or so songs as always? Every time I try to shuffle my playlist, I mourn the death of Google Play Music and accept my fate.</p>
+</div>
+			<div class="blogSep">-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</div>
+		</li>
+	
+		<li>
+			<h3><a href="/posts/How-to-add-giscus-comments-to-a-Jekyll-blog.html" class="blogLink">How to add giscus comments to a jekyll blog</a></h3></li>
+			<div class="blogPrev"><p>This is actually quite easy, but there are a few steps required before just adding the code to your web page.</p>
+</div>
+			<div class="blogSep">-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</div>
+		</li>
+	
+	
+		<li>
+			<h3><a href="/posts/How-to-make-a-newsletter-for-a-Jekyll-blog.html" class="blogLink">How to make a newsletter for a jekyll blog</a></h3></li>
+			<div class="blogPrev"><p>This is one of the most overly complex and undocumented jekyll problems I’ve come across so far (apart from pagination - but I try to block that out of my memory). I’ll try to make this short and easy to follow, but no promises.</p>
+</div>
+		</li>
+	
+</ul></div>
+		</div>
+	</body><footer class="window">
+	<p>&copy; 
+	<a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0 </a> -
+	2025 @probablyidiot - 
+	<a href="mailto:probablyidiot@probablysomething.co.uk" target="_blank">Email me!</a></p>
+</footer></html>

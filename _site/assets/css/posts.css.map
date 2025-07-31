@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["posts.scss"],"names":[],"mappings":"AAAA;EACC;;;AAGD;EACC;;;AAGD;EACC","sourcesContent":[".pagination {\n\tdisplay: flex;\n}\n\n.prevBtn {\n\tflex: 1\n}\n\n.nextBtn {\n\tflex: 1;\n}"],"file":"posts.css"}

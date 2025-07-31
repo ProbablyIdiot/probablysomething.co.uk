@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	{%- include header.html -%}
+
+	<body>
+		{%- include navbar.html -%}
+		<div class="mainFlex">
+			<div class="mainContent window">
+				<div class="title-bar">
+					<div class="title-bar-text">
+						<img src="{{ page.mainIco }}" class="windowIco"/>
+						<span class="windowTitle">{{ page.mainTitle }}</span>
+					</div>
+					<div class="title-bar-controls">
+						<button aria-label="Minimize"></button>
+						<button aria-label="Maximize"></button>
+						<button aria-label="Close"></button>
+					</div>
+				</div>
+
+				<div class="windowTxt">{{ content }}</div>
+			</div>
+			<div class="mainSidebar window">
+				<div class="title-bar inactive">
+					<div class="title-bar-text">
+						<img src="/assets/images/w98-icons/address_book-1.png" class="windowIco"/>
+						<span class="windowTitle">blogviewR 0.12.4</span>
+					</div>
+					<div class="title-bar-controls">
+						<button aria-label="Minimize"></button>
+						<button aria-label="Maximize"></button>
+						<button aria-label="Close"></button>
+					</div>
+				</div>
+
+				{%- include blogViewer.html -%}
+			</div>
+		</div>
+	</body>
+
+	{%- include footer.html -%}
+</html>

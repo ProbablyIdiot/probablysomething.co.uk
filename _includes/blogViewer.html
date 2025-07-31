@@ -1,0 +1,15 @@
+<ul class="tree-view">
+	{% for post in site.posts limit:2%}
+		<li>
+			<h3><a href="{{ post.url }}" class="blogLink">{{ post.title }}</a></h3></li>
+			<div class="blogPrev">{{ post.excerpt }}</div>
+			<div class="blogSep">-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</div>
+		</li>
+	{% endfor %}
+	{% for post in site.posts offset:2 limit:1%}
+		<li>
+			<h3><a href="{{ post.url }}" class="blogLink">{{ post.title }}</a></h3></li>
+			<div class="blogPrev">{{ post.excerpt }}</div>
+		</li>
+	{% endfor %}
+</ul>

@@ -1,0 +1,6 @@
+---
+layout: post
+author: ProbablyIdiot
+mainTitle: BlogZilla 2024.08.15
+mainIco: /assets/images/w98-icons/executable_script-0.png
+---

@@ -1,0 +1,54 @@
+---
+layout: default
+title: Posts
+mainTitle: BlogZilla beta2-2024.08.14
+mainIco: /assets/images/w98-icons/executable_script-0.png
+pagination:
+  enabled: true
+---
+<head>
+	<link rel="stylesheet" href="/assets/css/posts.css">
+</head>
+
+<h2>Latest posts:</h2>
+
+<!--Loops through posts-->
+<ul>
+	{% for post in paginator.posts %}
+	<li>
+		<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+		{{ post.excerpt }}
+	</li>
+	{% endfor %}
+</ul>
+
+<!--Pagination btns-->
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+	{% if paginator.previous_page %}
+		<form action="{{ paginator.previous_page_path | relative_url }}">
+			<button type="submit" class="prevBtn">&laquo; Previous</button>
+		</form>
+	{% else %}
+		<button> &laquo; Previous</button>
+	{% endif %}
+
+	{% for page in (1..paginator.total_pages) %}
+		{% if page == paginator.page %}
+			<em>&ensp;{{ page }}&ensp;</em>
+		{% elsif page == 1 %}
+			<a href="/posts.html">&ensp;{{ page }}&ensp;</a>
+		{% else %}
+			<a href="{{ '/posts/:num.html' | replace: ':num', page }}">&ensp;{{ page }}&ensp;</a>
+		{% endif %}
+	{% endfor %}
+
+	{% if paginator.next_page %}
+		<form action="{{ paginator.next_page_path }}">
+			<button type="submit" class="nextBtn">Next &raquo;</button>
+		</form>
+	{% else %}
+		<button>Next &raquo;</button>
+	{% endif %}
+</div>
+{% endif %}

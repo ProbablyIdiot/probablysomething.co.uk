@@ -1,0 +1,24 @@
+gems:
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+  - jekyll-feed
+
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: "/posts/:num.html"
+  title: " page :num"
+  limit: 0
+  sort_field: "date"
+  sort_reverse: true
+  #paginate_path: "/posts/:num"
+  indexpage: "posts"
+
+feed:
+  title: ProbablySomething
+  url: https://probablysomething.co.uk
+  feed.icon: /favicon.png
+
+permalink: "/posts/:title.html"
+
+include: [".well-known"]
